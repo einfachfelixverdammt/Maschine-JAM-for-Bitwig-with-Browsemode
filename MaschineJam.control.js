@@ -129,7 +129,7 @@ function init() {
 	var cliplaunchMode 	= new ClipMode(clipView, trackViewContainer, sceneView, trackViewContainer.getMixerView().trackStates());
 	var padMode 		= new PadMode(noteView, drumpadView, trackViewContainer, sceneView, clip, cursorDevice, sceneView);
 	var stepMode 		= new StepMode(noteView, drumpadView, trackViewContainer, trackHandler, clip,cursorDevice, sceneView);
-	var browseMode 		= new BrowseMode(browseView, trackViewContainer,sceneView, cursorDevice, padMode);
+	var browseMode 		= new BrowseMode(browseView, trackViewContainer,sceneView, cursorDevice, padMode, applicationControl);
 	var multiMidiMode   = new MultiMidiMode(noteView, trackViewContainer, sceneView, multiMidiView);
 
 	var efxClipView = new ClipLaunchView(efxTrackBankContainer);

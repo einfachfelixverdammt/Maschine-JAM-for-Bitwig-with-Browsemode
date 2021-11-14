@@ -240,6 +240,7 @@ function MainKnobKontrol(cursorTrack, transport, cursorClip, cursorDevice, modeH
                 break;
             case Modes.BROWSER:
                 //println(value);
+
                 var speedBrowser = 6;
                 if (value === 1) {
                     if (modifiers.isShiftDown()) {
@@ -271,6 +272,8 @@ function MainKnobKontrol(cursorTrack, transport, cursorClip, cursorDevice, modeH
                         }
                     }
                 }
+                application.getAction("focus_browser_search_field").invoke();
+
                 break;
             case Modes.GROUP:
                 inc = (value === 1 ? 1 : -1) * (shift ? 1 : 6);
@@ -358,6 +361,7 @@ function MainKnobKontrol(cursorTrack, transport, cursorClip, cursorDevice, modeH
             if (workaroundBrowsing) {
                 application.arrowKeyDown();
                 application.arrowKeyRight();
+                application.getAction("focus_browser_search_field").invoke();
                 workaroundBrowsing = false;
             }
             return;

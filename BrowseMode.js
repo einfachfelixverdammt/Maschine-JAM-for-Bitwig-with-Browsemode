@@ -12,7 +12,7 @@
  * @returns {PadMode}
  */
 
- function BrowseMode(browseView, trackView, sceneView, cursorDevice,padMode) {
+ function BrowseMode(browseView, trackView, sceneView, cursorDevice,padMode, applicationControl) {
     JamMode.call(this, browseView, trackView, sceneView);
     var handleEvent = this.handleEvent;
     var searchByTag = this.searchByTag;
@@ -27,6 +27,9 @@
     var maxNext = 100;
     var cursorResult = cursorBrowsingSession.getCursorResult();
     var modeHandler = null;
+    //Focus Browser Search Field
+    //var application = applicationControl.getApplication();
+    //applicationControl.invokeAction("focus_browser_search_field" );
 
     deviceBrowser.addIsBrowsingObserver(function(callback){
         if(callback === false && (modeHandler !== null && modeHandler !== undefined)){
