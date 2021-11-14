@@ -1,0 +1,1 @@
+MainKnobControl Zeile 52: userWantsBrowseMode = false; wenn kein browseMode gewünscht ist. true wenn er erwünscht ist.
